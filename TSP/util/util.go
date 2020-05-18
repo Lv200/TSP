@@ -4,22 +4,9 @@ import (
 	"math"
 	"math/rand"
 	"time"
-
-	"../constant"
 )
 
-func MaxInt(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
-
-func EqualFloat32(x, y float32) bool {
-	return math.Abs(float64(x-y)) < constant.EPS
-}
-
-func Distance(x1, y1, x2, y2 int) float32 {
+func Distance(x1, y1, x2, y2 float32) float32 {
 	return float32(math.Sqrt(math.Pow(float64(x1-x2), 2) + math.Pow(float64(y1-y2), 2)))
 }
 
